@@ -1,14 +1,10 @@
-import mongoose from "mongoose";
-// import { unique } from "next/dist/build/utils";
+import mongoose, { Schema, model, models } from 'mongoose'
 
-const userSchema = new mongoose.Schema({
-    _id: { type : String, required:true},
-    name: { type : String, required:true},
-    email: { type : String, required:true, unique:true},
-    imageUrl : { type : String, required:true},
-    cartItems : { type : Object, default: {} }
-}, {minimize: false})
+const UserSchema = new Schema({
+  email: { type: String, required: true, unique: true },
+  avatar: { type: String, required: false },
+  password: { type: String, required: true }, // Lưu password đã hash
+})
 
-const User = mongoose.model.user || mongoose.model('user', userSchema)
-
+const User = models.User || model('User', UserSchema)
 export default User

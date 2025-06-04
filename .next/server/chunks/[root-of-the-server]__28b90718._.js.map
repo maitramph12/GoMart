@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 6, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"","debugId":null}},
+    {"offset": {"line": 68, "column": 0}, "map": {"version":3,"sources":["file:///D:/downloads/GoMart/app/api/ping/route.js"],"sourcesContent":["import { NextResponse } from 'next/server'\r\nimport mongoose from 'mongoose'\r\n\r\nexport async function GET() {\r\n  try {\r\n    if (mongoose.connection.readyState !== 1) {\r\n      await mongoose.connect(process.env.MONGODB_URI)\r\n    }\r\n\r\n    return NextResponse.json({ message: '✅ Đã kết nối MongoDB thành công' })\r\n  } catch (error) {\r\n    console.error('❌ Lỗi kết nối MongoDB:', error)\r\n    return NextResponse.json(\r\n      { error: 'Không thể kết nối MongoDB'},\r\n      { status: 500 }\r\n    )\r\n  }\r\n}\r\n"],"names":[],"mappings":";;;AAAA;AACA;;;AAEO,eAAe;IACpB,IAAI;QACF,IAAI,yGAAA,CAAA,UAAQ,CAAC,UAAU,CAAC,UAAU,KAAK,GAAG;YACxC,MAAM,yGAAA,CAAA,UAAQ,CAAC,OAAO,CAAC,QAAQ,GAAG,CAAC,WAAW;QAChD;QAEA,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CAAC;YAAE,SAAS;QAAkC;IACxE,EAAE,OAAO,OAAO;QACd,QAAQ,KAAK,CAAC,0BAA0B;QACxC,OAAO,gIAAA,CAAA,eAAY,CAAC,IAAI,CACtB;YAAE,OAAO;QAA2B,GACpC;YAAE,QAAQ;QAAI;IAElB;AACF","debugId":null}}]
+}

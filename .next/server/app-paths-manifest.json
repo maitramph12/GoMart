@@ -1,6 +1,8 @@
 {
-  "/all-products/page": "app/all-products/page.js",
-  "/cart/page": "app/cart/page.js",
-  "/my-orders/page": "app/my-orders/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/login/route": "app/api/login/route.js",
+  "/api/ping/route": "app/api/ping/route.js",
+  "/api/register/route": "app/api/register/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
   "/page": "app/page.js"
 }

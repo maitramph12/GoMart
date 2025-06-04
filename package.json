@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.19.4",
+    "bcrypt": "^6.0.0",
     "inngest": "^3.38.0",
+    "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.15.0",
     "next": "^15.3.2",
     "react": "^19.0.0",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@types/react": "19.1.6",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
     "postcss": "^8",
